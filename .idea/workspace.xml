@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5c8f528e-d7aa-4b60-9ed2-9087c1a62ab2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NodeJS/db.js" afterPath="$PROJECT_DIR$/NodeJS/db.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,11 +46,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="employee.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="employee.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NodeJS/models/employee.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="105">
+              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="employeeCtrl.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NodeJS/controllers/employeeCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -86,6 +95,7 @@
         <option value="$PROJECT_DIR$/NodeJS/app.js" />
         <option value="$PROJECT_DIR$/NodeJS/db.js" />
         <option value="$PROJECT_DIR$/NodeJS/models/employee.js" />
+        <option value="$PROJECT_DIR$/NodeJS/controllers/employeeCtrl.js" />
       </list>
     </option>
   </component>
@@ -138,6 +148,12 @@
               <item name="Web-App-using-AngularJS-and-Node.js" type="b2602c69:ProjectViewProjectNode" />
               <item name="Web-App-using-AngularJS-and-Node.js" type="462c0819:PsiDirectoryNode" />
               <item name="NodeJS" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Web-App-using-AngularJS-and-Node.js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Web-App-using-AngularJS-and-Node.js" type="462c0819:PsiDirectoryNode" />
+              <item name="NodeJS" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -182,12 +198,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1530223416088</updated>
-      <workItem from="1530223419659" duration="3291000" />
+      <workItem from="1530223419659" duration="3921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3291000" />
+    <option name="totallyTimeSpent" value="3921000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -259,8 +275,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NodeJS/models/employee.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="105">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NodeJS/controllers/employeeCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
           <folding />
         </state>
       </provider>
