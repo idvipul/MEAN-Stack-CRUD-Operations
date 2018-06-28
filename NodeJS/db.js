@@ -1,9 +1,6 @@
-const express = require('express');
-const router = express.Router();
-
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/CrudDB', function (err) {
+mongoose.connect('mongodb://localhost:27017/CrudDB', (err) => {
     if (!err) {
         console.log('MongoDB Connection Successful!')
     } else {
@@ -11,4 +8,4 @@ mongoose.connect('mongodb://localhost:27017/CrudDB', function (err) {
     }
 });
 
-module.exports = router;
+module.exports = mongoose;
