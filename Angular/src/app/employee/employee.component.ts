@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from "@angular/forms";
 
 import { EmployeeService } from '../shared/employee.service';
 
@@ -13,6 +14,20 @@ export class EmployeeComponent implements OnInit {
   constructor(private employeeService: EmployeeService) { }
 
   ngOnInit() {
+    this.resetForm();
+  }
+
+  resetForm(form?: NgForm) {
+    if (form)
+      form.reset();
+    // reset form fields
+    this.employeeService.selctedEmployees = {
+      _id: "",
+      name: "",
+      position: "",
+      office: "",
+      salary: null
+    }
   }
 
 }
