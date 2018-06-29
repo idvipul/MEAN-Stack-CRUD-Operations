@@ -1,3 +1,54 @@
-<p>
-  employee works!
-</p>
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content white-text">
+        <div class="row">
+          <div class="col s5">
+            <!--employee form-->
+            <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+              <!--store ObjectId from MongoDB-->
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="employeeService.selctedEmployees._id">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="name" #name="ngModel" [(ngModel)]="employeeService.selctedEmployees.name"
+                         placeholder="Enter full name">
+                  <label>Name :
+                    <label class="red-text">*</label>
+                  </label>
+                </div>
+
+                <div class="input-field col s12">
+                  <input type="text" name="position" #position="ngModel" [(ngModel)]="employeeService.selctedEmployees.position"
+                         placeholder="Enter full name">
+                  <label>Position :
+                    <label class="red-text">*</label>
+                  </label>
+                </div>
+
+                <div class="input-field col s12">
+                  <input type="text" name="office" #office="ngModel" [(ngModel)]="employeeService.selctedEmployees.office"
+                         placeholder="Enter full name">
+                  <label>Office :
+                    <label class="red-text">*</label>
+                  </label>
+                </div>
+
+                <div class="input-field col s12">
+                  <input type="text" name="salary" #salary="ngModel" [(ngModel)]="employeeService.selctedEmployees.salary"
+                         placeholder="Enter full name">
+                  <label>Salary :
+                    <label class="red-text">*</label>
+                  </label>
+                </div>
+
+              </div>
+            </form>
+          </div>
+          <div class="col s7">
+            <!--employee list-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
