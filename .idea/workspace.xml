@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5c8f528e-d7aa-4b60-9ed2-9087c1a62ab2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Angular/src/app/employee/employee.component.html" afterPath="$PROJECT_DIR$/Angular/src/app/employee/employee.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Angular/src/app/employee/employee.component.ts" afterPath="$PROJECT_DIR$/Angular/src/app/employee/employee.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Angular/src/app/shared/employee.service.ts" afterPath="$PROJECT_DIR$/Angular/src/app/shared/employee.service.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="employee.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="employee.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Angular/src/app/employee/employee.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -52,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="employee.component.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="employee.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Angular/src/app/employee/employee.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="68" column="39" lean-forward="true" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+            <state relative-caret-position="408">
+              <caret line="63" column="28" lean-forward="false" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -105,8 +103,8 @@
         <option value="$PROJECT_DIR$/Angular/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/NodeJS/app.js" />
         <option value="$PROJECT_DIR$/Angular/src/app/shared/employee.service.ts" />
-        <option value="$PROJECT_DIR$/Angular/src/app/employee/employee.component.html" />
         <option value="$PROJECT_DIR$/Angular/src/app/employee/employee.component.ts" />
+        <option value="$PROJECT_DIR$/Angular/src/app/employee/employee.component.html" />
       </list>
     </option>
   </component>
@@ -220,12 +218,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1530223416088</updated>
-      <workItem from="1530223419659" duration="20814000" />
+      <workItem from="1530223419659" duration="21002000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20814000" />
+    <option name="totallyTimeSpent" value="21002000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -452,14 +450,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Angular/src/app/employee/employee.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="68" column="39" lean-forward="true" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Angular/src/app/shared/employee.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -477,6 +467,14 @@
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/src/app/employee/employee.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="63" column="28" lean-forward="false" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
