@@ -25,4 +25,8 @@ export class EmployeeService {
     // make an http post request in Node.js project
     return this.http.post(this.baseURL, emp);
   }
+
+  getEmployeeList() {
+    return this.http.get(this.baseURL);
+  }
 }
