@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from "@angular/forms";
+import { NgForm} from "@angular/forms";
 
 import { EmployeeService } from '../shared/employee.service';
+
+declare var M: any;
 
 @Component({
   selector: 'app-employee',
@@ -28,6 +30,15 @@ export class EmployeeComponent implements OnInit {
       office: "",
       salary: null
     }
+  }
+
+  onSubmit(form : NgForm) {
+    // insert new employee into MongoDB -- consume post request from Node.js
+    // create a function inside employee service class
+    this.employeeService.postEmployee(form.value).subscribe((res) => {
+      this.resetForm(form);
+      M.toast({html: 'Saved successfully!', classes: 'rounded'});
+    });
   }
 
 }
