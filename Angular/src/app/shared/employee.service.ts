@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 
-import { Employee } from './employee.model';
+import {Employee} from './employee.model';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,8 @@ export class EmployeeService {
   // make a post request
   readonly baseURL = 'http://localhost:3000/employees';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   // insert into MongoDB - parameter emp is of the type Employee model class
   postEmployee(emp: Employee) {
@@ -28,5 +29,10 @@ export class EmployeeService {
 
   getEmployeeList() {
     return this.http.get(this.baseURL);
+  }
+
+  putEmployee(emp: Employee) {
+    // parameters -- baseURL + EmployeeId, Employee object
+    return this.http.put(this.baseURL + `/${emp._id}`, emp);
   }
 }

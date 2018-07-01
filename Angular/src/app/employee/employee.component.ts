@@ -34,19 +34,53 @@ export class EmployeeComponent implements OnInit {
     }
   }
 
-  onSubmit(form : NgForm) {
-    // insert new employee into MongoDB -- consume post request from Node.js
-    // create a function inside employee service class
-    this.employeeService.postEmployee(form.value).subscribe((res) => {
-      this.resetForm(form);
-      M.toast({html: 'Saved successfully!', classes: 'rounded'});
-    });
+  // onSubmit(form : NgForm) {
+  //   if (form.value._id == "") {
+  //     // insert new employee into MongoDB -- consume post request from Node.js
+  //     // create a function inside employee service class
+  //     this.employeeService.postEmployee(form.value).subscribe((res) => {
+  //       this.resetForm(form);
+  //       // refresh Employee list -- as it is displayed on the UI
+  //       this.refreshEmpoyeeList();
+  //       M.toast({html: 'Saved successfully!', classes: 'rounded'});
+  //     });
+  //   } else {
+  //     //update operation
+  //     this.employeeService.putEmployee(form.value).subscribe((res) => {
+  //       this.resetForm(form);
+  //       this.refreshEmpoyeeList();
+  //       M.toast({html: 'Updated successfully!', classes: 'rounded'});
+  //     });
+  //   }
+  // }
+
+
+  onSubmit(form: NgForm) {
+    if (form.value._id == "") {
+      this.employeeService.postEmployee(form.value).subscribe((res) => {
+        this.resetForm(form);
+        this.refreshEmpoyeeList();
+        M.toast({ html: 'Saved successfully', classes: 'rounded' });
+      });
+    }
+    else {
+      this.employeeService.putEmployee(form.value).subscribe((res) => {
+        this.resetForm(form);
+        this.refreshEmpoyeeList();
+        M.toast({ html: 'Updated successfully', classes: 'rounded' });
+      });
+    }
   }
+
 
   refreshEmpoyeeList() {
     this.employeeService.getEmployeeList().subscribe((res) => {
       this.employeeService.employees = res as Employee[];
     });
+  }
+
+  onEdit(emp : Employee) {
+    this.employeeService.selctedEmployees = emp;
   }
 
 }
