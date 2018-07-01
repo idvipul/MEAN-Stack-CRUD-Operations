@@ -35,4 +35,8 @@ export class EmployeeService {
     // parameters -- baseURL + EmployeeId, Employee object
     return this.http.put(this.baseURL + `/${emp._id}`, emp);
   }
+
+  deleteEmployee(_id: String) {
+    return this.http.delete(this.baseURL+ `/${_id}`);
+  }
 }

@@ -71,7 +71,7 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-    if (!ObjectId.isValid(req.params.id))
+    if (!objectId.isValid(req.params.id))
         return res.status(400).send(`No record with given id : ${req.params.id}`);
 
     Employee.findByIdAndRemove(req.params.id, (err, doc) => {

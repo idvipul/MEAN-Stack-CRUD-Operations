@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { NgForm} from "@angular/forms";
+import {Component, OnInit} from '@angular/core';
+import {NgForm} from "@angular/forms";
 
-import { EmployeeService } from '../shared/employee.service';
+import {EmployeeService} from '../shared/employee.service';
 import {Employee} from "../shared/employee.model";
 
 declare var M: any;
@@ -14,7 +14,8 @@ declare var M: any;
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor(private employeeService: EmployeeService) { }
+  constructor(private employeeService: EmployeeService) {
+  }
 
   ngOnInit() {
     this.resetForm();
@@ -34,44 +35,26 @@ export class EmployeeComponent implements OnInit {
     }
   }
 
-  // onSubmit(form : NgForm) {
-  //   if (form.value._id == "") {
-  //     // insert new employee into MongoDB -- consume post request from Node.js
-  //     // create a function inside employee service class
-  //     this.employeeService.postEmployee(form.value).subscribe((res) => {
-  //       this.resetForm(form);
-  //       // refresh Employee list -- as it is displayed on the UI
-  //       this.refreshEmpoyeeList();
-  //       M.toast({html: 'Saved successfully!', classes: 'rounded'});
-  //     });
-  //   } else {
-  //     //update operation
-  //     this.employeeService.putEmployee(form.value).subscribe((res) => {
-  //       this.resetForm(form);
-  //       this.refreshEmpoyeeList();
-  //       M.toast({html: 'Updated successfully!', classes: 'rounded'});
-  //     });
-  //   }
-  // }
-
-
   onSubmit(form: NgForm) {
     if (form.value._id == "") {
+      // insert new employee into MongoDB -- consume post request from Node.js
+      // create a function inside employee service class
       this.employeeService.postEmployee(form.value).subscribe((res) => {
         this.resetForm(form);
+        // refresh Employee list -- as it is displayed on the UI
         this.refreshEmpoyeeList();
-        M.toast({ html: 'Saved successfully', classes: 'rounded' });
+        M.toast({html: 'Saved successfully', classes: 'rounded'});
       });
     }
     else {
+      //update operation
       this.employeeService.putEmployee(form.value).subscribe((res) => {
         this.resetForm(form);
         this.refreshEmpoyeeList();
-        M.toast({ html: 'Updated successfully', classes: 'rounded' });
+        M.toast({html: 'Updated successfully', classes: 'rounded'});
       });
     }
   }
-
 
   refreshEmpoyeeList() {
     this.employeeService.getEmployeeList().subscribe((res) => {
@@ -79,8 +62,19 @@ export class EmployeeComponent implements OnInit {
     });
   }
 
-  onEdit(emp : Employee) {
+  onEdit(emp: Employee) {
     this.employeeService.selctedEmployees = emp;
+  }
+
+  onDelete(_id : String, form : NgForm) {
+    // confirm the operation from client side
+    if (confirm('Are you sure you want to elete this record?') == true) {
+      this.employeeService.deleteEmployee(_id).subscribe((res) => {
+        this.refreshEmpoyeeList();
+        this.resetForm(form);
+        M.toast({html: 'Deleted successfully', classes: 'rounded'});
+      });
+    }
   }
 
 }
